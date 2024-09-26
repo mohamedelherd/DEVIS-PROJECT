@@ -11,13 +11,15 @@ public class User_devi {
     Long id;
     String email ;
     String password ;
+    String username;
 
     @ManyToMany
     @JoinTable(
-            name = "user_devi",
+            name = "user_devis",
             joinColumns = @JoinColumn(name = "use_id"),
             inverseJoinColumns = @JoinColumn(name = "devi_id")
     )
     List<Devi> devi;
+    boolean issubs;
 
 }
